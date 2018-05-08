@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yuzzle.greetingapp.MainActivity">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enjoy the music"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="italic"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text1"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/play_button"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:onClick="onClickStart"/>
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pause_button"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:onClick="onClickPause"/>
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/stop_button"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:onClick="onClickStop"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Watch the video"
+        android:textSize="40sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="italic"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="40dp"
+        android:gravity="center" />
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="100dp" />
+
+
+</RelativeLayout>
